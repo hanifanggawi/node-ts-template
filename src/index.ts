@@ -5,14 +5,11 @@ dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 8000
+const HOST = process.env.PORT || 'http://localhost'
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use('/', defaultRouter())
 
-app.get('/', (_req, res) => {
-  res.send('Hello Node Server')
-})
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server started on ${HOST}:${PORT}`))

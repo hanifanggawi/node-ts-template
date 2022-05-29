@@ -1,6 +1,10 @@
 import { Request, Response } from 'express';
 import { readFileSync } from 'fs';
 
+export function index(_req: Request, res: Response) {
+  res.status(200).send('Welcome Node Server')
+}
+
 export function ping(_req: Request, res: Response) {
   res.status(200).send({ ping: 'pong' })
 }
