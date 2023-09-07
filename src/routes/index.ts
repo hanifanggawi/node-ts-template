@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { index, ping, version } from "../controller";
+import { index, ping, version } from "../service";
 
 export function defaultRouter(): Router {
   const route: Router = Router()
